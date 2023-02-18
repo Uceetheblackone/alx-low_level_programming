@@ -17,7 +17,7 @@ int main(void)
 	while
 		(d < 10)
 		{
-			putchar(d + '0');
+			putchar(48 + d);
 			d++; }
 	while
 		(c <= 'f')
