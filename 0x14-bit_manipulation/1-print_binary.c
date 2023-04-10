@@ -13,7 +13,7 @@ void print_binary(unsigned long int n)
 	for (i = 63; i >= 0; i--)
 	{
 		binary_num = n >> i;
-		if (binary_num & n)
+		if (binary_num & 1)
 		{
 			_putchar('1');
 			num_times++;
@@ -22,7 +22,6 @@ void print_binary(unsigned long int n)
 		{
 			_putchar('0');
 		}
-
 	}
 	_putchar('\n');
 }
