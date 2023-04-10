@@ -12,20 +12,20 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char *b;
-	ssize_t op;
+	char *buf;
+	ssize_t fd;
 	ssize_t actual_num;
-	ssize_t rd;
+	ssize_t t;
 
-	op = open(filename, O_RDONLY);
-	if (op == -1)
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
 		return (0);
-	b = malloc(sizeof(char) * letters);
-	rd = read(op, b, letters);
-	actual_num = write(STDOUT_FILENO, b, rd);
+	buf = malloc(sizeof(char) * letters);
+	t = read(fd, buf, letters);
+	actual_num = write(STDOUT_FILENO, buf, t);
 
-	free(b);
-	close(op);
+	free(buf);
+	close(fd);
 	return (actual_num);
 }
 
