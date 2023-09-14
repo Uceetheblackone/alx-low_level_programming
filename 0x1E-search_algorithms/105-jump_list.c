@@ -6,7 +6,7 @@
  * @node: starting node.
  * @n: number of positions next to the node.
  *
- * Return: The node n places next to the given node, 
+ * Return: The node n places next to the given node,
  * otherwise the last node or NULL.
  */
 listint_t *get_n_next(listint_t *node, size_t n)
